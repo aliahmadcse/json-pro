@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import * as Diff from 'diff';
 import { Diff2HtmlUI } from 'diff2html/lib/ui/js/diff2html-ui';
 import 'diff2html/bundles/css/diff2html.min.css';
-import JsonInput from './JsonInput';
+import JsonInput from '../JsonInput/JsonInput'; // Updated path
+import Footer from '../Footer/Footer'; // Updated path
 import './JsonDiff.css';
 
 const JsonDiff = () => {
@@ -33,7 +34,8 @@ const JsonDiff = () => {
         JSON.parse(rightJson);
         setError('');
         setShowDiff(true);
-    } catch (e) {
+    // eslint-disable-next-line no-unused-vars
+    } catch (_e) {
         setError('Invalid JSON');
     }
   };
@@ -54,8 +56,8 @@ const JsonDiff = () => {
   }, [showDiff, leftJson, rightJson]);
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="flex flex-col min-h-screen bg-gray-100"> {/* Added flex-col and min-h-screen */}
+      <div className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> {/* Added flex-grow */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             JSON Diff
@@ -106,6 +108,7 @@ const JsonDiff = () => {
           </div>
         )}
       </div>
+      <Footer /> {/* Use the Footer component here */}
     </div>
   );
 };

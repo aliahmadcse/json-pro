@@ -10,6 +10,7 @@ const JsonFormatter = () => {
       const parsed = JSON.parse(jsonInput);
       setFormattedJson(JSON.stringify(parsed, null, 2));
       setError('');
+    // eslint-disable-next-line no-unused-vars
     } catch (e) {
       setError('Invalid JSON');
       setFormattedJson('');
