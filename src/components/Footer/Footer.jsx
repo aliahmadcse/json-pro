@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white text-center p-4 mt-8 w-full bottom-0">
       <p className="text-sm">
-        Made with love ❤️ by Ali - 
+        Made with love ❤️ by Ali - &nbsp; 
         <a 
           href="https://github.com/aliahmadcse/json-pro/" 
           target="_blank" 

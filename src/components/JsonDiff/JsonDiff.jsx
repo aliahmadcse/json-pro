@@ -86,7 +86,7 @@ const JsonDiff = () => {
               />
             </div>
             <div className="mt-8 flex justify-center">
-              <button onClick={handleCompare} className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:-translate-y-1">
+              <button onClick={handleCompare} className="px-10 py-4 bg-primary text-white font-bold rounded-xl shadow-xl hover:bg-secondary transition-all duration-300 transform hover:scale-105">
                 Compare
               </button>
             </div>
@@ -95,7 +95,7 @@ const JsonDiff = () => {
           <div className="space-y-8">
             <div className="diff-output w-full border border-gray-300 rounded-lg bg-white p-4 shadow-md" ref={diffContainer}></div>
             <div className="mt-8 flex justify-center">
-              <button onClick={() => setShowDiff(false)} className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:-translate-y-1">
+              <button onClick={() => setShowDiff(false)} className="px-10 py-4 bg-primary text-white font-bold rounded-xl shadow-xl hover:bg-secondary transition-all duration-300 transform hover:scale-105">
                 New Comparison
               </button>
             </div>
