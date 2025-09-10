@@ -49,7 +49,6 @@ const JsonDiffViewer = () => {
 
   const renderJsonWithDiff = (obj, delta, isLeft = true) => {
     const renderValue = (value, path = []) => {
-      const pathKey = path.join('.')
       const deltaValue = path.reduce((d, key) => d?.[key], delta)
       
       let className = ''
