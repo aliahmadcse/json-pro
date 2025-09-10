@@ -5,7 +5,14 @@
   "type": "module",
   "homepage": "https://aliahmadcse.github.io/json-pro/",
   "description": "A beautiful JSON diff tool for comparing JSON objects with syntax highlighting and visual differences",
-  "keywords": ["json", "diff", "compare", "tool", "react", "tailwindcss"],
+  "keywords": [
+    "json",
+    "diff",
+    "compare",
+    "tool",
+    "react",
+    "tailwindcss"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,6 +20,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1",
     "jsondiffpatch": "^0.7.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
