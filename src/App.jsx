@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import JsonDiff from './components/JsonDiff';
-import JsonFormatter from './components/JsonFormatter';
+import JsonDiff from "./components/JsonDiff/JsonDiff";
+import JsonFormatter from "./components/JsonFormatter/JsonFormatter";
 import './App.css';
 
 function App() {

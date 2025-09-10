@@ -1,4 +1,5 @@
 import Icon from '../Icon/Icon';
+import './JsonInput.css';
 
 const JsonInput = ({ title, value, onChange, onFileUpload, fileInputId }) => {
   return (

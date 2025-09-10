@@ -56,8 +56,8 @@ const JsonDiff = () => {
   }, [showDiff, leftJson, rightJson]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100"> {/* Added flex-col and min-h-screen */}
-      <div className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> {/* Added flex-grow */}
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <div className="flex-grow w-full px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             JSON Diff
@@ -68,8 +68,8 @@ const JsonDiff = () => {
         </div>
 
         {!showDiff ? (
-          <div>
-            <div className="diff-viewer">
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <JsonInput
                 title="Original JSON"
                 value={leftJson}
@@ -85,17 +85,17 @@ const JsonDiff = () => {
                 fileInputId="right-file"
               />
             </div>
-            <div className="mt-4 flex justify-center">
-              <button onClick={handleCompare} className="compare-button">
+            <div className="mt-8 flex justify-center">
+              <button onClick={handleCompare} className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:-translate-y-1">
                 Compare
               </button>
             </div>
           </div>
         ) : (
-          <div>
-            <div className="diff-output" ref={diffContainer}></div>
-            <div className="mt-4 flex justify-center">
-              <button onClick={() => setShowDiff(false)} className="new-comparison-button">
+          <div className="space-y-8">
+            <div className="diff-output w-full border border-gray-300 rounded-lg bg-white p-4 shadow-md" ref={diffContainer}></div>
+            <div className="mt-8 flex justify-center">
+              <button onClick={() => setShowDiff(false)} className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:-translate-y-1">
                 New Comparison
               </button>
             </div>
@@ -103,12 +103,12 @@ const JsonDiff = () => {
         )}
 
         {error && (
-          <div className="mt-4 text-red-600 text-center">
+          <div className="mt-4 text-red-600 text-center font-medium">
             {error}
           </div>
         )}
       </div>
-      <Footer /> {/* Use the Footer component here */}
+      <Footer />
     </div>
   );
 };
