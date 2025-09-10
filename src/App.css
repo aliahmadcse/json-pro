@@ -1,23 +1,69 @@
-/* App-specific styles */
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+.App {
+  text-align: center;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+.App-header h1 {
+  margin: 0;
+  font-size: 1.5em;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(59, 130, 246, 0.3);
-  border-radius: 3px;
+.App-header nav button {
+  margin-left: 15px;
+  padding: 8px 15px;
+  border: none;
+  background-color: #61dafb;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(59, 130, 246, 0.5);
+.App-header nav button.active {
+  background-color: #ffffff;
+  color: #282c34;
+}
+
+main {
+  padding: 20px;
+}
+
+.formatter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.json-input,
+.formatted-json {
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+.format-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #61dafb;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.error-message {
+  color: red;
 }
